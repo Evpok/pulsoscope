@@ -10,13 +10,13 @@ path pulsi = circle((0, 0), pulse_radius);
 draw(pulsi);
 
 // North east ray
-pair ne_ray_start = (pulse_radius*sqrt(2)/2, pulse_radius*sqrt(2)/2);
-path ne_ray = ne_ray_start -- ne_ray_start+(ray_length*sqrt(2)/2, ray_length*sqrt(2)/2);
+pair ne_ray_start = (pulse_radius*cos(pi/2), pulse_radius*sin(pi/2));
+path ne_ray = ne_ray_start -- ne_ray_start+(ray_length*cos(pi/2), ray_length*sin(pi/2));
 draw(ne_ray);
 
 // South west ray
-pair sw_ray_start = (-pulse_radius*sqrt(2)/2, -pulse_radius*sqrt(2)/2);
-path sw_ray = sw_ray_start -- sw_ray_start-(ray_length*sqrt(2)/2, ray_length*sqrt(2)/2);
+pair sw_ray_start = (-pulse_radius*cos(pi/2), -pulse_radius*sin(pi/2));
+path sw_ray = sw_ray_start -- sw_ray_start-(ray_length*cos(pi/2), ray_length*sin(pi/2));
 draw(sw_ray);
 
 // central dot
