@@ -6,4 +6,4 @@ for f in pathlib.Path(".").glob("**/*.asy"):
     cd @(f.parent)
     echo @(f"defaultpen(RGB(162,216,231)); import {f.stem}; shipout(bbox(10, 10, RGB(9,4,34),Fill));") | asy -f pdf - -o ../_build/@(f.stem).pdf
     cd ..
-    convert -geometry 1000x3000 -density 300 -units PixelsPerInch _build/@(f.stem).pdf _build/@(f.stem).png
+    convert -density 600 -units PixelsPerInch _build/@(f.stem).pdf _build/@(f.stem).png
