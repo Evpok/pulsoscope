@@ -9,8 +9,9 @@ path pulsi = circle((0, 0), pulse_radius);
 draw(pulsi);
 
 // North east ray
-pair ne_ray_start = (pulse_radius*sqrt(2)/2, pulse_radius*sqrt(2)/2);
-path ne_ray = ne_ray_start -- ne_ray_start+(ray_length*sqrt(2)/2, ray_length*sqrt(2)/2);
+// North east ray
+pair ne_ray_start = pulse_radius*dir(45);
+path ne_ray = ne_ray_start -- ne_ray_start+ray_length*dir(45);
 draw(ne_ray);
 
 // North west beeps
@@ -19,8 +20,8 @@ draw(arc((0,0), pulse_radius+2*ray_length/4, 110, 160));
 draw(arc((0,0), pulse_radius+3*ray_length/4, 100, 170));
 
 // South west ray
-pair sw_ray_start = (-pulse_radius*sqrt(2)/2, -pulse_radius*sqrt(2)/2);
-path sw_ray = sw_ray_start -- sw_ray_start-(ray_length*sqrt(2)/2, ray_length*sqrt(2)/2);
+pair sw_ray_start =  pulse_radius*dir(-135);
+path sw_ray = sw_ray_start -- sw_ray_start+ray_length*dir(-135);
 draw(sw_ray);
 
 // South east beeps
