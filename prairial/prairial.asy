@@ -1,6 +1,5 @@
-settings.outformat = "svg";
 unitsize(1cm);
-defaultpen(4);
+defaultpen(currentpen+4);
 real ray_length = 1.5*sqrt(2);
 real pulse_radius = 1;
 

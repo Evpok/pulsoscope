@@ -1,7 +1,6 @@
-settings.outformat = "pdf";
 import graph;
 unitsize(1cm);
-defaultpen(4);
+currentpen += 4;
 real ray_length = 2*sqrt(2);
 real pulse_radius = 1;
 

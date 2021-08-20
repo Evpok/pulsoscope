@@ -1,7 +1,6 @@
-settings.outformat = "svg";
 import graph;
 unitsize(1cm);
-defaultpen(4);
+defaultpen(currentpen+4);
 real ray_length = 1.5*sqrt(2);
 real pulse_radius = 1;
 real widget_length = 1/3;

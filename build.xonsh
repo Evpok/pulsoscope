@@ -1,0 +1,9 @@
+import pathlib
+mkdir -p _build
+for f in pathlib.Path(".").glob("**/*.asy"):
+    print(f.stem)
+    asy -f svg @(f) -o _build/@(f.stem).svg
+    cd @(f.parent)
+    echo @(f"defaultpen(RGB(162,216,231)); import {f.stem}; shipout(bbox(10, 10, RGB(9,4,34),Fill));") | asy -f pdf - -o ../_build/@(f.stem).pdf
+    cd ..
+    convert -geometry 1000x3000 -density 300 -units PixelsPerInch _build/@(f.stem).pdf _build/@(f.stem).png
